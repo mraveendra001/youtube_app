@@ -8,7 +8,7 @@ const Head = () =>{
 
    const toggleMenuHandler = () =>{
        dispatch(toggleMenu());
-    };   // this will dispatch an action  dispatch () is a function , dispatch comes from useDispatch() from react -redux s
+    };   // this will dispatch an action  dispatch () is a function .. , dispatch comes from useDispatch() from react -redux s
     return (
         <div className="grid grid-flow-col p-5 m-2 shadow-lg">
     <div className="flex col-span-1">
