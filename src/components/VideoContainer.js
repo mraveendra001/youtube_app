@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { YOUTUBE_VIDEO_API } from "../util/constants";
 import VideoCards from "./VideoCards";
+import AddVideoCard from "./VideoCards";
+
 
 const VideoContainer =()=>{
  const [videos,setVidoes]=useState([]);
@@ -14,18 +16,18 @@ const VideoContainer =()=>{
     const getVideos= async() => {
         const data=await fetch(YOUTUBE_VIDEO_API);
         const json = await data.json();
-        console.log(json);
+      //  console.log(json);
         setVidoes(json.items);
     };
 
 if (!videos) return null;
     return (
         <div className="flex flex-wrap">
-{     videos.map(
+            {videos[0] && <AddVideoCard info={videos[0]} />}  {/*AddVideoCard is a higher order component used to make changes to the existing component */}
+            {videos.map(
     (video) => (
     <Link key={video.id} to ={"/watch?v="+video.id}> <VideoCards key={video.id} info={video} /> </Link>
-               ) 
- )}
+))}
 
         </div>
     )

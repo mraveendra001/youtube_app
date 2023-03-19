@@ -6,14 +6,16 @@ const Sidebar =() =>{
        // this is subscribing to the portion of the store 
     if (!isMenuOpen) return null;  // early return , if isMenuOpen is true it will go to return (home ,short and all) if its false it will return null
     return (
-        <div className="p-5 shadow-2xl w-[150px]">    
-            <ul>
-                    <li> <Link to="/">Home</Link></li>
-                    <li>Shorts</li>
-                    <li>Videos</li>
-                    <li>Live</li>
+        <div className="px-6 w-[150px]">    
+            <ul className="py-10 shadow-sm">
+            <li className="hover:bg-slate-300 hover:border-slate-300 hover:rounded-md border border-transparent py-2">
+                 <Link to="/">Home</Link>
+            </li>
+                    <li className="hover:bg-slate-300  hover:border-slate-300 hover:rounded-md border border-transparent py-2"><Link to="/shorts"> Shorts</Link> </li>
+                    <li className="hover:bg-slate-300  hover:border-slate-300 hover:rounded-md border border-transparent py-2">Videos</li>
+                    <li className="hover:bg-slate-300  hover:border-slate-300 hover:rounded-md border border-transparent py-2 shadow-2xl">Live</li>
             </ul>
-            <h1 className="font-bold"> Subscriptions </h1>
+            <h1 className="font-bold "> Subscriptions </h1>
                     <ul>
                         <li>Music</li>
                         <li>Sports</li>
