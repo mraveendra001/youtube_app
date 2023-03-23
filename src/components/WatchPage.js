@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { closeMenu } from "../util/appSlice";
 import { useSearchParams } from "react-router-dom";
 import CommentsContainer from "./CommentsContainer";
+import LiveChat from "./LiveChat";
 
 
 
@@ -19,8 +20,9 @@ const WatchPage = () =>{
     useEffect (() =>{dispatch(closeMenu())})
 
     return (
-      <div className="flex flex-col">
-        <div className="px-5"> 
+      <div className="flex flex-col w-full">
+        <div className="px-5 flex"> 
+          <div className=""> 
           <iframe width="1050" 
           height="500" 
           src={"https://www.youtube.com/embed/"+searchParams.get("v")} 
@@ -32,6 +34,8 @@ const WatchPage = () =>{
           picture-in-picture; web-share" 
           allowFullScreen>
         </iframe> 
+         </div> 
+         <div className="w-full" ><LiveChat/></div> 
         </div>
         <CommentsContainer/>
         </div>

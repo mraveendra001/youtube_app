@@ -8,6 +8,7 @@ import store from "./util/store";
 import WatchPage from "./components/WatchPage";
 import WatchShorts from "./components/WatchShorts";
 import ShortsContainer from "./components/ShortsContainer";
+import Demo from "./components/Demo";
 //import ShortsContainer from "./components/ShortsContainer";
 
 const appRouter = createBrowserRouter([
@@ -30,6 +31,11 @@ const appRouter = createBrowserRouter([
 element : <ShortsContainer/> 
 
 },
+{
+  path : 'demo',
+element : <Demo/> 
+
+}
  
 ]
   }

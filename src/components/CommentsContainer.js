@@ -54,7 +54,7 @@ const commentsData = [
 const Comment =({data}) =>{
     const {name,text}=data;
     return(
-        <div className='flex shadow-md bg-gray-300 rounded-sm my-2'>
+        <div className='flex shadow-md bg-gray-200 rounded-sm my-2'>
             <img
              className="w-8 h-8"
              alt="user"
@@ -89,7 +89,7 @@ const CommentsList = ({comments}) =>{
 }
 const CommentsContainer =() =>{
     return (
-        <div className='m-5 p-2'>
+        <div className='m-5 px-2 py-2'>
          <h1 className='text-2xl font-bold'>Comments : </h1>
          <Comment data={commentsData[0]}/>
          <CommentsList comments={commentsData}/>

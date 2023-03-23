@@ -4,3 +4,8 @@ export const YOUTUBE_VIDEO_API="https://youtube.googleapis.com/youtube/v3/videos
 export const YOUTUBE_SHORTS_API = "https://www.googleapis.com/youtube/v3/search?key="+GOOGLE_API_KEY+"&part=snippet&maxResults=10&type=video&videoDefinition=high";
 
 export const YOUTUBE_SEARCH_API="http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=";
+ 
+export const OFFSET_LIVE_CHAT=10;
+
+//pagination 
+//live chat more important than infinite scroll
